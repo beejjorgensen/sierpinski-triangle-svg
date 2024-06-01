@@ -32,8 +32,6 @@ def sierpinski(depth, width, height, attrs):
 
     def triangle(points):
         """Scale the unit triangle and make SVG polys"""
-        nonlocal width, height
-        
         scaled_points = []
 
         for p in points:
