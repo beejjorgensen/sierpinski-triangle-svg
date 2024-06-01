@@ -17,7 +17,6 @@ def svg_end():
     print('</svg>')
 
 def svg_polygon(points, attrs):
-    attrs = 'fill="black"' if attrs is None else attrs
     pstr = " ".join([f'{x},{y}' for x,y in points])
     print(f'<polygon points="{pstr}" {attrs}/>')
 
@@ -29,19 +28,20 @@ def bisect(p0, p1):
     return (x0+x1) / 2, (y0+y1) / 2
 
 def sierpinski(depth, width, height, attrs):
+    attrs = 'fill="black"' if attrs is None else attrs
 
     def triangle(points):
-        """Scale the unit triangle and make SVG polys"""
-        scaled_points = []
+        """Transform the unit triangle and make SVG polys"""
+        xpoints = []
 
         for p in points:
             x, y = p
             x *= width
             y *= width
             y += height
-            scaled_points.append((x,y))
+            xpoints.append((x,y))
 
-        svg_polygon(scaled_points, attrs)
+        svg_polygon(xpoints, attrs)
 
     def sr(p0, p1, p2, depth):
         """Recursive triangle generator"""
