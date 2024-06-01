@@ -1,6 +1,8 @@
 # Sierpiński triangle SVG generator
 
-Simple command line tool to generate Sierpiński triangles in SVG.
+Simple command line tool to generate [Sierpiński
+triangles](https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle) in
+SVG.
 
 ## Usage
 
