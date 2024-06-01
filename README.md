@@ -26,6 +26,6 @@ it to control styling.
 
 ## Complexity
 
-`O(4ⁿ)` (over depth) in space, time, and resultant SVG size. Don't mess
+`O(3ⁿ)` (over depth) in space, time, and resultant SVG size. Don't mess
 around with large depth values. 😅
 
