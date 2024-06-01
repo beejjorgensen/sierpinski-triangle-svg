@@ -90,8 +90,9 @@ def parse_cl(argv):
     except ValueError:
         error = "invalid numeric value"
 
-    if width is None or depth is None or len(argv) > 0:
-        error = ""
+    else:
+        if width is None or depth is None or len(argv) > 0:
+            error = ""
 
     return width, depth, attrs, error
 
